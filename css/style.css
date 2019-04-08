@@ -1,0 +1,218 @@
+.container {
+	overflow: auto;
+	height: 100vh;
+	grid-template-areas: 
+	'heading heading heading heading heading heading'
+	'build build build build build build'
+	'project project project project project project'
+	'homeLoc homeLoc homeLoc homeLoc homeLoc homeLoc'
+	'ab ab ab ab ab ab'
+	'persona persona persona persona persona persona'
+	'contacted contacted . . . .'
+	'map map map map map map'
+	;
+}
+
+header {
+	top: 0;
+	position: sticky;
+	grid-area: heading;
+	width: 100%;
+	grid-template-areas: 'leftSide . . . . rightSide';
+	background: white;
+}
+
+ul {
+	display: inline-block;
+}
+
+ul li{
+	display: inline-block;
+	padding: 15px;
+	font-size: 20px;
+}
+
+
+.BR {
+	font-weight: bold;
+}
+
+nav.leftNav {
+	display: inline;
+	grid-area: leftSide;
+	float: left;
+}
+
+nav.rightNav {
+	float: right;
+	display: inline;
+	grid-area: rightSide;	
+}
+/* End of navigation */
+
+/* start of building */
+
+.building {
+	grid-area: build;
+	width: 100vw;
+}
+
+.building img {
+	width: 100%;
+}
+
+/* End of building */
+
+.projects {
+	grid-area: project;
+	text-align: left;
+	margin: 2%;
+	font-size: 25px;
+}
+/* text "Project" end */
+
+/* house gallery start */
+
+.houses {
+	width: 100vw;
+	display: grid; /* very important to add without this auto auto will not work*/
+	margin: 0 2%;
+	grid-area: homeLoc;
+	grid-template-columns: auto auto auto auto;
+  	text-align: center;
+  	color: white;
+}
+
+.home {
+	position: relative;
+	margin: 1%;
+}
+
+.home img {
+	display: block;
+	width: 100%;
+
+
+}
+
+.imageText {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	padding: 10px;
+	font-size: 18px;
+}
+
+/* house gallery end */
+
+/* About start */
+
+h1 {
+	font-size: 25px;
+	margin: 2% 0;
+}
+
+.about p {
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-right: 50px;
+}
+
+.about {
+	grid-area: ab;
+	text-align: left;
+	margin: 2%;
+}
+
+/* About end */
+
+/* 4 Persons */
+
+.persons {
+	display: grid;
+	grid-area: persona;
+	grid-template-columns: auto auto auto auto;
+	width: 100%;
+	padding: 0 2%;
+}
+
+.person {
+	padding: 5px;
+	width: 100%;
+}
+
+.person img {
+	width: 100%;
+	display: block;
+}
+
+.person p {
+	padding-right: 100px;
+	font-size: 20px;
+	margin: 3% 0;
+}
+
+.person a {
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+	font-size: 20px;
+	background: #f1f1f1;
+	padding: 4px 120px;
+}
+
+.person a:hover {
+	background: silver;
+}
+
+h2 {
+	margin: 2% 0;
+	color: silver;
+}
+
+/* 4 Persons end */ 
+
+/* Form start */
+
+.contact {
+	grid-area: contacted;
+	margin-left: 2%;
+}
+
+.contact h1 {
+	border-bottom: 2px solid #f1f1f1;
+	padding-bottom: 2%;
+}
+
+input {
+	display: block;
+	width: 100%;
+	margin: 1% 0;
+	padding: 15px;
+	font-size: 15px;
+}
+
+button {
+	color: #fff;
+	background: #000;
+	font-size: 15px;
+	border: none;
+	padding: 10px;
+}
+
+button:hover {
+	background: silver;
+	color: black;
+}
+
+/* Form end */
+
+/* map start */
+
+.street {
+	grid-area: map;
+	margin: 2%;
+}
+
+/* map end */
